@@ -27,6 +27,7 @@ import { AnswerService } from 'services/answer/answer.service';
 import { OpenaiService } from 'services/openai/openai.service';
 import { IndicatorService } from 'services/indicator/indicator.service';
 import { PositionService } from 'services/position/position.service';
+import { AppLogger } from './utils/logger.service';
 
 @Module({
   imports: [
@@ -35,6 +36,6 @@ import { PositionService } from 'services/position/position.service';
     TypeOrmModule.forFeature([Question, Profile, Answer, Indicator, Position, PositionProfile]),
   ],
   controllers: [AppController, QuestionController, ProfileController, AnswerController, IndicatorsController, PositionController],
-  providers: [AppService, MigrationsService, QuestionService, ProfileService, AnswerService, OpenaiService, IndicatorService, PositionService],
+  providers: [AppService, MigrationsService, QuestionService, ProfileService, AnswerService, OpenaiService, IndicatorService, PositionService, AppLogger],
 })
 export class AppModule {}
