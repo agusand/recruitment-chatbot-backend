@@ -1,6 +1,16 @@
 # 🧠 HR-Intelligent Platform – Backend
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Modular backend built with NestJS and TypeScript for the HR-Intelligent platform. Provides an API for candidate analysis and scoring using OpenAI.
+
+## ✨ Features
+
+- Candidate analysis and scoring using OpenAI
+- Modular architecture with NestJS
+- PostgreSQL integration
+- Dockerized for easy deployment
+- Code quality enforced with ESLint, Prettier, Husky, and lint-staged
 
 ## 🚀 Tech Stack
 
@@ -29,10 +39,17 @@ yarn install
 
 ### Environment variables
 
-Create a `.env` file in the root with the following:
+Create a `.env` file in the root with the following (see also `.env.example`):
 
 ```env
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/hr_intelligent
+OPENAI_API_KEY=
+OPENAI_MODEL=gpt-3.5-turbo
+
+DATABASE_NAME=hr_intelligent
+DATABASE_HOST=localhost
+DATABASE_PASSWORD=password
+DATABASE_USERNAME=user
+DATABASE_PORT=3306
 ```
 
 ### Start with Docker Compose
@@ -61,3 +78,11 @@ yarn test
 ## 📄 License
 
 MIT
+
+## 🚦 Next Steps
+
+- [ ] Implement CI/CD pipelines (e.g., GitHub Actions) for automated testing, linting, and deployment.
+- [ ] Expand automated test coverage (integration, e2e).
+- [ ] Add and maintain API documentation (Swagger/OpenAPI).
+- [ ] Enhance error handling and logging.
+- [ ] Review and optimize Docker configurations for production.
